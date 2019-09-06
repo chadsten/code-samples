@@ -1,0 +1,182 @@
+//
+// Partial to control product node display
+//
+// Related:
+// 
+.node-type-commerce-product {
+  @include pie-clearfix;
+
+  .page__title {
+    &.mobile {
+      @media (min-width: $media_luke) {
+        display: none;
+      }
+    }
+
+    &.desktop {
+      display: none;
+
+      @media (min-width: $media_luke) {
+        margin-top: -10/16*1rem;
+        display: block;
+      }
+    }
+  }
+
+  #block-views-product-part-numbers-block {
+    display: none;
+  }
+
+  .group-left-content {
+    @include pie-clearfix;
+
+    @media (min-width: $media_luke) {
+      float: left;
+      width: 40%;
+      max-width: 450/16*1em;
+      margin-bottom: 100/16*1em;
+    }
+
+    @media (min-width: $media_vader) {
+      width: 45%;
+    }
+
+    .field-name-field-comm-image {
+      margin-bottom: 30/16*1em;
+
+      @media (min-width: $media_luke) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .group-right-content {
+    @include pie-clearfix;
+
+    @media (min-width: $media_luke) {
+      float: right;
+      width: 60%;
+      margin-bottom: 120/16*1em;
+    }
+
+    @media (min-width: $media_vader) {
+      width: 55%;
+    }
+
+    .field-name-field-group-pn,
+    .field-name-field-comm-items-per-unit,
+    .field-name-commerce-price,
+    .field-name-field-comm-other-uom,
+    .commerce-product-extra-field-sku,
+    .field-name-field-product-manufacturer,
+    .field-name-field-comm-unit-of-measurement {
+      font-size: 18/16*1rem;
+
+      span {
+        padding-right: 6/18*1em;
+      }
+    }
+  }
+
+  .field-name-field-group-pn,
+  .field-name-field-comm-other-uom {
+    .field-label,
+    .field-items {
+      display: inline;
+
+      .field-item {
+        display: inline;
+      }
+
+    }
+  }
+
+  .field-name-field-comm-other-uom {
+    p {
+      display: inline;
+      margin: 0;
+    }
+  }
+
+  .field-name-field-group-pn .container-inline {
+    display: inline;
+  }
+
+  .field-name-field-product-manufacturer {
+    clear: both;
+  }
+
+  .field-type-commerce-product-reference {
+    @include pie-clearfix;
+    margin: 30/16*1em 0 0 0;
+
+    .form-item {
+      margin-bottom: 0;
+
+      @media (min-width: $media_yoda) {
+        display: inline-block;
+      }
+    }
+
+    .field-label,
+    .single-entity-option {
+      font-size: 18/16*1em;
+    }
+
+    .form-item-quantity {
+      margin-top: 20/16*1em;
+    }
+
+    .form-item-commerce-wishlist-selection {
+      display: block;
+
+      @media (min-width: $media_luke) {
+        margin-top: 20/16*1em;
+      }
+    }
+
+    .form-item-commerce-wishlist-textfield {
+      margin-left: 0;
+    }
+
+    .form-submit {
+      margin-top: 20/16*1em;
+
+      @media (min-width: $media_yoda) {
+        margin-top: 0;
+        display: inline-block;
+        margin-left: 16/16*1em;
+        width: auto;
+      }
+    }
+  }
+
+  .field-name-field-comm-image {
+    @media (min-width: $media_luke) {
+      padding-right: 20/16*1em;
+    }
+  }
+
+  .body-text {
+    margin-top: 30/16*1em;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .form-item-commerce-wishlist-textfield {
+    margin-top: 16/16*1em;
+    width: 100%;
+
+    @media (min-width: $media_yoda) {
+      float: left;
+      margin-left: 10/16*1em;
+      width: auto;
+    }
+  }
+}
+
+.not-logged-in .field-name-field-group-pn {
+  display: none !important;
+}
